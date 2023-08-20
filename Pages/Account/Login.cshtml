@@ -1,0 +1,42 @@
+﻿@page
+@model WebApp_.Net6.Pages.Account.LoginModel
+@{
+}
+
+
+<div class="container border" style="padding:20px">
+    <form method="post">
+        <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+        <div class="form-group row mb-3">
+            <div class="col-2">
+                <label asp-for="Credentials.UserName"></label>
+            </div>
+            <div class="col-5">
+                <input type="text" asp-for="Credentials.UserName" class="form-control" />
+            </div>
+            <span class="text-danger" asp-validation-for="Credentials.UserName"></span>
+        </div>
+
+        <div class="form-group row mb-3">
+            <div class="col-2">
+                <label asp-for="Credentials.Password"></label>
+            </div>
+            <div class="col-5">
+                <input type="password" asp-for="Credentials.Password" class="form-control" />
+            </div>
+            <span class="text-danger" asp-validation-for="Credentials.Password"></span>
+        </div>
+        <div class="row form-check mb-2">
+            <input type="checkbox" asp-for="Credentials.RememberMe" class="form-check-input" />
+            <label class="form-check-label" asp-for="Credentials.RememberMe"></label>
+        </div>
+         <div class="form-group row mb-3">
+            <div class="col-2">
+                <input type="submit" class="btn btn-primary" value="Login" />
+            </div>
+            
+        </div>
+
+    </form>
+
+</div>
