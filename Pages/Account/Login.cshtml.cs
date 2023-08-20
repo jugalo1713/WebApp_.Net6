@@ -41,7 +41,7 @@ namespace WebApp_.Net6.Pages.Account
                     IsPersistent = Credentials.RememberMe
                 };
 
-                await HttpContext.SignInAsync("MyCookieAuthJulian", principal);
+                await HttpContext.SignInAsync("MyCookieAuthJulian", principal, authenticationProperties);
 
                 return RedirectToPage("/Index");
             }
